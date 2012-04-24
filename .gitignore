@@ -1,9 +1,65 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
 
-# Project property files
-.actionScriptProperties
-.flexProperties
-.settings/
-.project
+
+  /****[Main Menu]****/
+
+	/*Main Menu Container*/
+	.nfMain {background-color:#eee;border-style:solid;border-width:1px 0px;border-color:#333;padding-left:40px;}
+
+	/*Item Links*/
+	.nfMain .nfLink {background-color:#ddd;border-style:solid;border-width:0px 0px 0px 1px;border-color:#333;padding:8px 40px 8px 20px;font-family:Arial;font-size:.9em;color:#333;text-decoration:none;}
+
+	/*Item Links - Parent*/
+	.nfMain .nfParent .nfLink {background-image:url('../../images/arrow1_down.gif');background-position:92% 52%;background-repeat:no-repeat;}
+	.nfMain .nfParent .nfSubS .nfLink {background-image:none;}
+
+	/*Item Links - Hover (duplicate styles below!)*/
+	.nfPure .nfItem:hover>.nfLink, .nfPure .nfItem:hover>*>.nfLink {text-decoration:underline;}
+	.nfPure .nfLink:hover, .nfMain .nfJSHover {text-decoration:underline;}
+
+	/*Item Links - Active*/
+	.nfMain .nfItem .nfJSActive {background-color:#666;color:#fff;text-decoration:underline;}
+	
+	/*Item Links - Focus*/
+	.nfPure .nfLink:focus, .nfMain .nfItem .nfJSFocus {text-decoration:underline;}	
+
+	/*Item Links - Breadcrumbs*/
+	.nfMain .nfItem .nfJSBreadcrumb {color:#00f;}
+
+
+
+	/****[Sub Menus]****/
+
+	/*Sub Menu Position Offsets*/
+	.nfMain .nfSubC {margin:0px 0px 0px 0px;}
+
+	/*Sub Menu Styles*/
+	.nfMain .nfSubS {background-color:#ddd;padding:15px;border:solid 1px #333}
+
+	/*Sub Menu Position Offsets - Level 2*/
+	.nfMain .nfSubS .nfSubC {margin:-1px 0px 0px 0px;}
+
+	/*Sub Menu Styles - Level 2*/
+	.nfMain .nfSubS .nfSubS {}
+
+	/*Item Links*/
+	.nfMain .nfSubS .nfLink {border-style:solid;border-width:0px 0px 1px 0px;border-color:#999;padding:8px 40px 8px 5px;color:#333;}
+
+	/*Item Links - Parent*/
+	.nfMain .nfSubS .nfParent .nfLink {background-image:url('../../images/arrow1_right.gif');}
+	.nfMain .nfSubS .nfParent .nfSubS .nfLink {background-image:none;}
+
+	/*Item Links - Last Child (ignored by IE8 & down)*/
+	.nfMain .nfSubS .nfItem:last-child .nfLink {border-width:0px;}
+	
+	/*Item Links - Hover (duplicate styles below!)*/
+	.nfMain .nfSubC .nfItem:hover>.nfLink {}
+	.nfMain .nfSubC .nfLink:hover, .nfMain .nfSubC .nfJSHover {}
+
+	/*Item Links - Active*/
+	.nfMain .nfSubS .nfItem .nfJSActive {color:#fff;text-decoration:underline;}
+	
+	/*Item Links - Focus*/
+	.nfPure .nfSubS .nfLink:focus, .nfMain .nfSubS .nfItem .nfJSFocus {}	
+
+	/*Item Links - Breadcrumbs*/
+	.nfMain .nfSubS .nfItem .nfJSBreadcrumb {}
